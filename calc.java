@@ -1,5 +1,6 @@
 package calculator;
-
+//first we have to  go to files->new->others->windowbuilder(if window builder not present then go to help ->install new software->install windowbuilder)
+//then go on design an set the design of your calculator and assign for each buttonits function.
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -63,6 +64,7 @@ public class calc{
 		JButton btnBackspace = new JButton("\uF0E7");
 		btnBackspace.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				//for backspace function these codes
 				String backSpace=null;
 				if(textField.getText().length()>0)
 				{
@@ -88,6 +90,8 @@ public class calc{
 		btn7.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btn7.setBounds(10, 140, 65, 54);
 		frame.getContentPane().add(btn7);
+		/* for every number set we have to type "String number=textField.getText()+btn(any number).getText();
+		 * textField.setText(number);"*/
 		
 		final JButton btn4 = new JButton("4");
 		btn4.addActionListener(new ActionListener() {
@@ -176,6 +180,60 @@ public class calc{
 		btnDot.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnDot.setBounds(75, 296, 65, 54);
 		frame.getContentPane().add(btnDot);
+		
+		
+		
+	//for all operations we have to wrirte this code	
+		
+		
+		/*JButton btnEqual = new JButton("=");
+		btnEqual.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String answer;
+				second=Double.parseDouble(textField.getText());
+				if(operation=="+")
+				{
+					result=first+second;
+					answer=String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation=="-")
+				{
+					result=first-second;
+					answer=String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation=="*")
+				{
+					result=first*second;
+					answer=String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation=="/")
+				{
+					result=first/second;
+					answer=String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				else if(operation=="%")
+				{
+					result=first%second;
+					answer=String.format("%.2f", result);
+					textField.setText(answer);
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+		});*/
 		
 		JButton btnEqual = new JButton("=");
 		btnEqual.addActionListener(new ActionListener() {
